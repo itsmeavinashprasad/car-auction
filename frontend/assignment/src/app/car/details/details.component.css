@@ -1,0 +1,12 @@
+.custom-card{
+  margin: 20px auto;
+  padding: 20px;
+}
+.text{
+  text-align: justify;
+  font-size: small;
+}
+.image{
+  /*height: 450px;*/
+  width: 100%;
+}

@@ -1,0 +1,5 @@
+<ul class="list-group custom-list" >
+  <li class="list-group-item" *ngFor="let car of cars" routerLink="/cars/{{car.id}}">
+    {{car.model | titlecase}}
+  </li>
+</ul>

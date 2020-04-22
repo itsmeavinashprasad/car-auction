@@ -1,0 +1,19 @@
+{
+    "cars": [
+        {
+            "id": 1,
+            "maker": "Mercedes Benz",
+            "model": "A Class"
+        },
+        {
+            "id": 2,
+            "maker": "Mercedes Benz",
+            "model": "B Class"
+        },
+        {
+            "id": 3,
+            "maker": "Mercedes Benz",
+            "model": "C Class"
+        }
+    ]
+}

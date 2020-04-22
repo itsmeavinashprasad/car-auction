@@ -1,0 +1,42 @@
+<div class="row" *ngIf="carDetails">
+  <div class="col-10">
+    <div class="card custom-card">
+      <div class="row">
+        <div class="col-6 border-right">
+          <img class="card-img-top image"
+               src="https://auto.ndtvimg.com/car-images/large/mercedes-benz/a-class/mercedes-benz-a-class.jpg?v=6"
+               alt="Car Image">
+          <h5 class="card-title text-right">{{carDetails.model}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted text-right">{{carDetails.maker}}</h6>
+        </div>
+
+        <div class="col-6">
+          <app-highest-bidder [maxBidAmount]="maxBid"></app-highest-bidder>
+          <p class="card-text text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+            Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+            into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum</p>
+          <button *ngIf="!showForm" (click)="placeBidding()" class="btn btn-primary btn-sm">Place your bidding</button>
+          <div *ngIf="showForm">
+            <app-bidding-form (bidPlaced)="registerBidding($event)" (bidCancelled)="cancel()"></app-bidding-form>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+
+        </div>
+      </div>
+
+      <div class="card-body">
+
+
+      </div>
+    </div>
+
+  </div>
+  <!--  <div class="col-4">-->
+  <!--  </div>-->
+</div>

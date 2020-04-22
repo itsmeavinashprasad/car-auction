@@ -1,0 +1,24 @@
+<form [formGroup]="formData" (ngSubmit)="onSubmit()" style="margin-top: 40px">
+  <div class="form-group row"
+       [class.was-validated]="formData.get('username').invalid && formData.get('username').touched">
+    <label for="username" class="col-3">User Name</label>
+    <input type="text" class="form-control  col-8" id="username" placeholder="Username" formControlName="username">
+  </div>
+
+  <div class="form-group row" [class.was-validated]="formData.get('amount').invalid && formData.get('amount').touched">
+    <label for="amount" class="col-3">Amount</label>
+    <div class="input-group mb-3 col-8" style="padding: 0">
+      <div class="input-group-prepend">
+        <span class="input-group-text">$</span>
+      </div>
+      <input type="text" class="form-control form-control-sm" id="amount" placeholder="Amount" formControlName="amount">
+    </div>
+  </div>
+
+  <div class="float-right">
+    <button type="submit" class="btn btn-success btn-sm" [disabled]="formData.invalid">Submit</button>
+    <button type="button" class="btn btn-danger btn-sm" (click)="cancelSubmission()">Cancel</button>
+  </div>
+
+
+</form>

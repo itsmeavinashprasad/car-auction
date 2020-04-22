@@ -1,0 +1,9 @@
+.custom-list {
+  width: 60%;
+  margin: 20px auto;
+
+}
+
+.custom-list:hover {
+  cursor: pointer;
+}
